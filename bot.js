@@ -11,7 +11,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`#help ||By - Saudi Shop TM||`,"https://www.twitch.tv/ahmad107996")
+client.user.setGame(`System II +help`,"https://www.twitch.tv/ahmad107996")
 client.user.setStatus("dnd")
 });
 
@@ -482,7 +482,7 @@ const prefix = "#";
   .addField("User:",  `[ + ${user.tag} + ]`)
   .addField("By:", `[  + ${message.author.tag} +  ]`)
   .addField("Reason:", `[ + ${reason} +  ]`)
- client.channels.get("516624277856976920","516609200248455173").send({embed : banembed})
+ client.channels.get("522360277212069888").send({embed : banembed})
   }
 });
 
