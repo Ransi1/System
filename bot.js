@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const fs = require("fs");
 const moment = require("moment");
 
-var prefix = "#";
+var prefix = "+";
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Desert Bot- Script By : EX Clan`);
