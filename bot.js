@@ -835,4 +835,33 @@ client.on("guildMemberAdd", member => {
 })
 
 
+//////////////////////////////////
+/////////////////////////////////
+var anti_spam = require("discord-anti-spam");
+ 
+anti_spam(bot, {
+  warnBuffer: 7,  
+  maxBuffer: 8,  
+  interval: 1000,  
+  warningMessage: "**سيتم طردك إن لم توقف سبام**",  
+  banMessage: "تم الطرد بسبب السبام",  
+  maxDuplicatesWarning: 7, //Toxic codes
+  maxDuplicatesBan: 10  //Toxic codes
+});
+ 
+bot.login(process.env.BOT_SPAM);
+ 
+const bot1 = new Discord.Client();
+ 
+ var anti_spam1 = require("discord-anti-spam");
+anti_spam1(bot1, {
+  warnBuffer: 7,  
+  maxBuffer: 8,  
+  interval: 1000, /
+  warningMessage: "**سيتم طردك إن لم توقف سبام**",  
+  banMessage: "تم الطرد بسبب السبام",  
+  maxDuplicatesWarning: 7,  
+  maxDuplicatesBan: 10 
+});
+
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
