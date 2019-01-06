@@ -835,22 +835,30 @@ client.on("guildMemberAdd", member => {
 })
 
 
-//////////////////////////////////
-/////////////////////////////////
-client.on('message', message => {
-  var prefix = "+"; /// غير البرفيكس
-  
-if (message.author.bot) return;
-if (!message.content.startsWith(prefix)) return;
-   
-let command = message.content.split(" ")[0];
-command = command.slice(prefix.length);
-   
-let args = message.content.split(" ").slice(1);
-   
-if (command === "say") {
-message.delete()
-  message.channel.sendMessage(args.join(" ")).catch(console.error);
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////
+////////////////////////
+ client.on('message',async msg => {
+  var p = "+";
+  if(msg.content.startsWith(p + "setuser")) {
+  if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('❌ **ليس لديك صلاحيه**')
+  if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('❌ **البوت لا يمتلك صلاحية**')
+  msg.guild.createChannel(`Member Count : [ ${client.users.size} ]` , 'voice').then(time => {
+    });
+
+  }
+ 
+});
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
